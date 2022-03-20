@@ -14,13 +14,6 @@ app.config['PERMANENT_SESSION_LIFETIME'] =  timedelta(minutes=5)
 website_link = "http://127.0.0.1:5000" 
 
 
-@app.before_request
-def require_login():
-    allow_login = ['login', 'register', 'static', 'home']
-    if request.endpoint not in allow_login and 'email' not in session:
-        return redirect('/login')
-
-
 @app.route('/')
 def home():
     return render_template('index.html')
