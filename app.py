@@ -11,7 +11,7 @@ env = dotenv.dotenv_values()
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'notasecretkey'
 app.config['PERMANENT_SESSION_LIFETIME'] =  timedelta(minutes=5)
-website_link = "http://127.0.0.1:5000" 
+website_link = "https://simply-get-that-job.herokuapp.com" 
 
 
 @app.route('/')
@@ -107,7 +107,7 @@ def get_data(user):
             df.to_csv(),
             mimetype="text/csv",
             headers={"Content-disposition":
-            "attachment; filename=filename.csv"})
+            "attachment; filename=data.csv"})
     except FileNotFoundError:
         abort(404)
 
