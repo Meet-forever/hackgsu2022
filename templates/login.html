@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Login</title>
+{% endblock %}
+
+{% block body %}
+
+<div class="container-box">
+
+        <form class="box" method="POST" action="{{weblink}}/login">
+            <h1>Login</h1>
+            <br/>
+            <br/>
+            <input class="box-ele" type="email" name="email" id="email" placeholder="Email or Username" required/>
+            <br/>
+            <input class="box-ele" type="password" name="password" id="password" placeholder="Password" required/>
+            <br />
+            <button type="submit">Sign In</button>
+            <br />
+            <div class="box-foot">
+                <p><a>Forgot Password?</a></p>
+                <p><a href="{{url_for('register')}}">Sign Up</a></p>
+            </div>
+            <br/>
+            {% if account_error: %}
+                <p>Email and/or password is incorrect.</p>
+            {% elif missing: %}
+                <p>Email and/or password is missing.</p>
+            {% endif %}
+        </form>        
+
+</div>
+
+
+{% endblock %}

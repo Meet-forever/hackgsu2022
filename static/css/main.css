@@ -1,0 +1,262 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.sec-g{
+    height: 100vh;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+nav{
+    position:absolute;
+    display: flex;
+    height: 10vh;
+    width: 100%;
+    justify-content: flex-end;
+    align-items:center;
+    z-index: 1000;
+}
+nav ul{
+    padding-right: 6%;
+    display: flex;
+}
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a{
+    padding: 8px 18px;
+    margin: 18px;
+    border-radius: 30px;
+    color: rgb(255, 255, 255);
+    transition: 0.2s background-color;
+}
+
+nav ul li a:hover{
+    color: #fff;
+    background-color: #6C63FF;
+
+}
+
+.img_container{
+    width: 100%;
+    height: 98vh;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 60%);
+    background-color: rgb(24, 24, 24);
+}
+
+.home-img{
+    width: 350px;
+    height: 38vh;
+    position: absolute;
+    background-color: white;
+    top: 50%;
+    left: 20%;
+    border-radius: 20px;
+    transform: translate(-30%, -40%) rotate(-10deg);
+    box-shadow: 0px 20px 40px 8px #6C63FF;
+}
+
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+}
+
+.home_text_area{
+    height: 300px;
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);    
+    right: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home_text_area h1{
+    color: #fff;
+    font-size: 2rem;
+}
+.home_text_area p{
+    color:rgb(206, 206, 206);
+    font-size: 1.2rem;
+}
+
+.home_text_area button{
+    padding: 8px 18px;
+    width: 150px;
+    border-radius: 30px;
+    text-decoration: none;
+    background-color: #6C63FF;
+    outline: none;
+    border: none;
+    transition: 0.5s;
+}
+.home_text_area button:hover{
+    background-color: #5b52fc;
+    padding: 8.2px 18.2px;
+}
+.home_text_area button a{
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+}
+
+.container-box{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(240, 240, 240)
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    height: 60vh;
+    width: 320px;
+    color:#3d3d3d;
+    border-radius: 20px;
+    padding: 2vw 2vw;
+}
+
+.box-ele{
+    padding: 6px 40px;
+    font-size: 16px;
+    border:rgb(206, 206, 206) 0.2px solid;
+    border-radius: 6px;
+}
+
+.box button{
+    padding: 9px 22px;
+    outline: none;
+    background-color: #3d3d3d;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    color: #fff;    
+    transition: 0.2s;
+    font-size: 16px;
+}
+
+.box button:hover{
+    padding: 8px 20px;
+}
+
+.box-foot{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.p-container{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100%;
+}
+
+.profile-b1{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: clamp(30vw, 360px, 100vw);
+    background-color: #5b52fc;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(255, 255, 255);
+}
+
+.profile-b2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: clamp(60vw, 300px, 100vw);
+}
+
+.input-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 6px 8px 10px;
+}
+.p-btn-wrap button, span{
+    padding: 3px;
+}
+
+.p-btn-wrap{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.p-sticky{
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.p-sticky div{
+    margin-right: 20px;
+}
+.p-sticky a{
+    padding: 10px;
+    background-color: #3d3d3d;
+    color:rgb(255, 255, 255);
+    border-radius: 20px;
+}
+.material-icons-outlined{
+    padding-right: 30px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.profile-b2 textarea{
+    resize: none;
+    font-size: 14px;
+}
+.profile-b2 p{
+    font-size: 12px;
+}
+
+@media screen and (max-width: 900px){
+    nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    nav ul{
+        padding: 0;
+    }
+    .home-img{
+        display: none;
+    }
+    .home_text_area{
+        top:50%;
+        left: 50%;
+        width: 300px;
+        transform: translate(-50%, -50%);
+        height: 20vh;
+        font-size: 1rem;
+    }
+    .img_container{
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 70%);
+    }
+    .profile-b1, .profile-b2{
+        width: 100%;
+    }
+}

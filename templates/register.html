@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Create Account</title>
+{% endblock %}
+
+{% block body %}
+
+<div class="container-box">
+        <form class="box" method="POST" action="{{weblink}}/register">
+            <h1>Create Account</h1> 
+            <br/>
+            <br/>
+            <input type="email" name="email" class="box-ele" id="email" placeholder="Email" required/>
+            <br/>
+            <input type="password" name="password" class="box-ele" id="password" placeholder="Password" required/>
+            <br />
+            <button type="submit">Submit</button>
+            <br/>
+            {% if account_error: %}
+                <p>Email and/or password is incorrect.</p>
+            {% elif missing: %}
+                <p>Email and/or password is missing.</p>
+            {% endif %}
+        </form>        
+</div>
+
+
+{% endblock %}

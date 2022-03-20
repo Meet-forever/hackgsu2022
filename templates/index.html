@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Home</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <!-- <li><a href="/about">About us</a></li> -->
+            <li><a href="/login">Login</a></li>  
+        </ul>
+    </nav>
+    <section class="section-1 sec-g" >
+        <div class="img_container"></div>
+        <img class="home-img" src="../static/img/fitting_piece.svg" alt="wallpaper">
+        <div class="home_text_area">
+            <h1>Are you Tired of Job Search?</h1>
+            <br/>
+            <p>We make job search easy by making jobs come to you!</p>
+            <br/><br/>
+            <button><a href="/register">Create Account</a></button>
+        </div>
+    </section>
+</div>
+
+{% endblock %}

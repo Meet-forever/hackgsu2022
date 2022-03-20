@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+{% endblock %}
+
+{% block title %}
+<title>Profile | {{user.capitalize()}}</title>
+{% endblock %}
+
+{% block body %}
+<div class="p-container">
+    <div class="p-sticky">
+        <span class="material-icons-outlined">settings</span>
+        <div>
+            <a href="{{website_link}}/logout">Log Out</a>
+        </div>
+    </div>
+    <div class="profile-b1">
+        <div class="p-btn-wrap">
+            <h1>{{user.capitalize()}}</h1>
+            <span class="material-icons">edit</span> 
+        </div>
+        <br/>
+        <div class="p-btn-wrap">
+            <input class="input-wrap" type="text" placeholder="email" value="{{email}}" readonly/>
+            <button><span class="material-icons">edit</span></button>
+        </div>
+        <br/>
+        <div class="p-btn-wrap">
+            <input class="input-wrap" type="text" placeholder="Mobile Number (+1)" readonly/>
+            <button><span class="material-icons">edit</span></button>
+        </div>
+    </div>
+    <div class="profile-b2">
+
+        <form method="post" action="{{website_link}}/accounts/data/{{user}}">
+            <h2>Add position and skills you are looking for:</h2>
+            <br/>
+            <textarea name="skills" id="skills" rows="5" cols="50"></textarea>
+            <br/>
+            <button type="submit">Submit</button>
+            <p>Split your position names with commas.</p>
+        </form>
+    </div>    
+</div>
+{% endblock %}
