@@ -12,7 +12,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'notasecretkey'
 app.config['PERMANENT_SESSION_LIFETIME'] =  timedelta(minutes=5)
 website_link = "https://simply-get-that-job.herokuapp.com" 
-
+# website_link = "http://localhost:5000"
 
 @app.route('/')
 def home():
@@ -81,8 +81,10 @@ def get_data(user):
         keys = ['date', 'company', 'position', 'tags', 'location', 'url']
         positions = request.form['skills']
         positions = positions.strip().split(',')
-        for ps in positions:
-            ps = ps.strip().lower()
+        print(positions)
+        for i, ps in enumerate(positions):
+            positions[i] = ps.strip().lower()
+
         def get_job():
             resp = requests.get(URL)
             results = resp.json()
