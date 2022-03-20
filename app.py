@@ -82,7 +82,7 @@ def get_data(user):
         positions = request.form['skills']
         positions = positions.strip().split(',')
         for ps in positions:
-            ps = ps.lower().strip()
+            ps = ps.strip().lower()
         def get_job():
             resp = requests.get(URL)
             results = resp.json()
